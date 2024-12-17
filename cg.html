@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title> CG </title>
+
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+
+</head>
+
+<a-assets>
+
+    <img id="piso" src="/texturas/ground_0024_color_2k.jpg">
+    <img id="ceu" src="/texturas/clear-sunny-sky.jpg">
+    <img id="agua" src="/texturas/agua.jpg">
+    <img id="toalha" src="/texturas/fabric-texture.jpg">
+    <img id="guardasol" src="/texturas/Tiles_053_basecolor.png">
+    <img id="tronco" src="/texturas/bark_willow_diff_1k.jpg">
+
+</a-assets>
+
+<body>
+
+    <a-scene>
+
+        <!--ceu-->
+        <a-sky src="#ceu" rotation="0 60 0">
+        </a-sky>
+
+        <!--mar-->
+        <a-plane position="0 -2 0" rotation="-90 0 0" width="200" height="200" src="#agua" repeat="4 4"
+            material="opacity: 0.8; transparent: true">
+        </a-plane>
+
+        <!--ilha-->
+        <a-sphere theta-length="40" radius="14" side="double" position="0 -14 0" src="#piso">
+        </a-sphere>
+
+        <!--Pedras-->
+        <a-entity>
+
+            <!-- Esferas -->
+            <a-sphere position="0.5 0 -1" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="0.5 0 1.2" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-0.5 0 1.2" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-0.5 0 -1" radius="0.08" color="#696969"></a-sphere>
+
+            <a-sphere position="0.5 0 0" radius="0.1" color="#808080"></a-sphere>
+            <a-sphere position="-0.5 0 0" radius="0.1" color="#808080"></a-sphere>
+
+            <a-sphere position="1 -1 5" radius="0.09" color="#696969"></a-sphere>
+            <a-sphere position="4 -1.5 5" radius="0.09" color="#696969"></a-sphere>
+
+            <!--SOS-->
+
+            <!-- S -->
+            <a-sphere position="-4 -0.74 -2" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-4 -0.66 -1" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-4 -0.69 -1.5" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-4.5 -0.9 -2" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-5 -1.08 -2" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-5 -1.04 -1.5" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-5 -1 -1" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-5.5 -1.2 -1" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-6 -1.4 -1" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-6 -1.45 -1.5" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-6 -1.5 -2" radius="0.08" color="#696969"></a-sphere>
+
+            <!-- O -->
+            <a-sphere position="-4 -0.6 0" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-4 -0.6 1" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-4 -0.6 0.5" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-4.5 -0.76 0" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-5 -0.9 0" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-5.5 -1.1 0" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-5 -0.9 1" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-5.5 -1.1 1" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-6 -1.35 1" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-6 -1.35 0.5" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-6 -1.35 0" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-4.5 -0.8 1" radius="0.08" color="#696969"></a-sphere>
+
+            <!-- S -->
+            <a-sphere position="-4 -0.74 2" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-4 -0.9 3" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-4 -0.8 2.5" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-4.5 -0.9 2" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-5 -1.1 2" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-5 -1.1 2.5" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-5 -1.25 3" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-5.5 -1.4 3" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-6 -1.7 3" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-6 -1.6 2.5" radius="0.08" color="#696969"></a-sphere>
+            <a-sphere position="-6 -1.5 2" radius="0.08" color="#696969"></a-sphere>
+
+        </a-entity>
+
+        <!--guarda sol-->
+        <a-entity>
+
+            <a-cylinder color="#ffffff" position="1 0.001" rotation="25 0 0" height="5.3" radius="0.03"
+                segments-radial="6" side="double">
+            </a-cylinder>
+
+            <a-sphere theta-length="90" rotation="25 0 0" radius="1.15" side="double" position="1 1.42 0.65"
+                src="#guardasol">
+            </a-sphere>
+
+        </a-entity>
+
+        <!--toalha-->
+        <a-plane position="0 0 0.1" rotation="-90 0 0" width="1" height="2.4" src="#toalha" repeat="4 4">
+
+            <!-- Coqueiro -->
+            <a-entity id="coqueiro" rotation="90 0 0">
+                <a-cylinder src="#tronco" position="-2 0 3" rotation="0 0 0" height="5.3" radius="0.15"
+                    segments-radial="6" side="double"></a-cylinder>
+
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="25 0 0" radius="1.15"
+                    side="double" position="-2 1.35 3.3"></a-sphere>
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="30 0 0" radius="1.15"
+                    side="double" position="-1.85 1.35 3.2"></a-sphere>
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="-25 0 0" radius="1.15"
+                    side="double" position="-2 1.35 2.8"></a-sphere>
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="-25 0 0" radius="1.15"
+                    side="double" position="-1.9 1.35 2.70"></a-sphere>
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="-25 90 0" radius="1.15"
+                    side="double" position="-2.2 1.35 3"></a-sphere>
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="-25 90 0" radius="1.15"
+                    side="double" position="-2.3 1.31 2.9"></a-sphere>
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="-25 -90 0" radius="1.15"
+                    side="double" position="-1.8 1.37 3"></a-sphere>
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="-25 -90 0" radius="1.15"
+                    side="double" position="-1.7 1.37 2.9"></a-sphere>
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="-25 -135 0" radius="1.15"
+                    side="double" position="-1.8 1.35 3.2"></a-sphere>
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="-25 -135 0" radius="1.15"
+                    side="double" position="-1.7 1.35 3.1"></a-sphere>
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="-25 -45 0" radius="1.15"
+                    side="double" position="-1.8 1.35 2.9"></a-sphere>
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="-25 -45 0" radius="1.15"
+                    side="double" position="-1.7 1.35 2.8"></a-sphere>
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="-25 -235 0" radius="1.15"
+                    side="double" position="-2.3 1.30 3.2"></a-sphere>
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="-25 -235 0" radius="1.15"
+                    side="double" position="-2.4 1.30 3.1"></a-sphere>
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="-25 -305 0" radius="1.15"
+                    side="double" position="-2.2 1.35 2.9"></a-sphere>
+                <a-sphere theta-length="20" color="#21853f" scale="0.5 1 2" rotation="-25 -305 0" radius="1.15"
+                    side="double" position="-2.1 1.35 2.8"></a-sphere>
+            </a-entity>
+
+            <!-- Cocos -->
+            <a-entity id="cocos" rotation="90 0 0">
+                <a-sphere position="-2.15 2.4 2.8" radius="0.12" color="#654321"></a-sphere>
+                <a-sphere position="-1.98 2.42 2.8" radius="0.12" color="#654321"></a-sphere>
+                <a-sphere position="-3 -0.6 3.5" radius="0.15" color="#654321"></a-sphere>
+            </a-entity>
+
+            <!--pintinho-->
+            <a-entity position="-2.6 -3.4 -0.5" rotation="90 0 0">
+
+                <!-- Corpo -->
+                <a-sphere position="0 0 0" radius="0.1" color="#ffcc00"></a-sphere>
+
+                <!-- Cabeça -->
+                <a-sphere position="0 0.15 0" radius="0.06" color="#ffcc00"></a-sphere>
+
+                <!-- Olhos -->
+                <a-sphere position="-0.04 0.17 0.05" radius="0.01" color="#000000"></a-sphere>
+                <a-sphere position="0.04 0.17 0.05" radius="0.01" color="#000000"></a-sphere>
+
+                <!-- Bico -->
+                <a-cone position="0 0.15 0.05" radius-bottom="0.02" height="0.05" color="#ff9933" rotation="90 0 0">
+                </a-cone>
+
+                <!-- Asas -->
+                <a-plane position="-0.1 0 -0.05" width="0.2" height="0.1" color="#ffcc00" rotation="0 0 -30"></a-plane>
+                <a-plane position="0.1 0 -0.05" width="0.2" height="0.1" color="#ffcc00" rotation="0 0 30"></a-plane>
+                <a-entity position="-3 -0.35 3.5">
+
+            
+                <!-- Gaivota 1 -->
+                <a-entity position="-3 5 9" rotation="0 -120 0">
+                    <!-- Corpo -->
+                    <a-sphere position="0 0 0" radius="0.1" color="#ffffff"></a-sphere>
+                    <!-- Cabeça -->
+                    <a-sphere position="0.1 0.1 0" radius="0.05" color="#ffffff"></a-sphere>
+                    <!-- Bico -->
+                    <a-cone position="0.17 0.1 0" radius-bottom="0.02" height="0.1" color="#ffa500" rotation="90 90 0"></a-cone>
+                    <!-- Olhos -->
+                    <a-sphere position="0.13 0.13 0.03" radius="0.01" color="#000000"></a-sphere>
+                    <a-sphere position="0.13 0.13 -0.03" radius="0.01" color="#000000"></a-sphere>
+                    <!-- Asa Esquerda -->
+                    <a-plane position="0 0 0.12" width="0.2" height="0.1" color="#ffffff" rotation="-45 0 -90"
+                        material="side: double"></a-plane>
+                    <!-- Asa Direita -->
+                    <a-plane position="0 0 -0.12" width="0.2" height="0.1" color="#ffffff" rotation="45 0 -90"
+                        material="side: double"></a-plane>
+                    <!-- Cauda -->
+                    <a-cone position="-0.1 0 0" radius-bottom="0.05" height="0.15" color="#ffffff" rotation="0 0 90"></a-cone>
+                </a-entity>
+        
+                <!-- Gaivota 2 -->
+                <a-entity position="-4 5 9" rotation="0 -120 0">
+                    <!-- Corpo -->
+                    <a-sphere position="0 0 0" radius="0.1" color="#ffffff"></a-sphere>
+                    <!-- Cabeça -->
+                    <a-sphere position="0.1 0.1 0" radius="0.05" color="#ffffff"></a-sphere>
+                    <!-- Bico -->
+                    <a-cone position="0.17 0.1 0" radius-bottom="0.02" height="0.1" color="#ffa500" rotation="90 90 0"></a-cone>
+                    <!-- Olhos -->
+                    <a-sphere position="0.13 0.13 0.03" radius="0.01" color="#000000"></a-sphere>
+                    <a-sphere position="0.13 0.13 -0.03" radius="0.01" color="#000000"></a-sphere>
+                    <!-- Asa Esquerda -->
+                    <a-plane position="0 0 0.12" width="0.2" height="0.1" color="#ffffff" rotation="-45 0 -90"
+                        material="side: double"></a-plane>
+                    <!-- Asa Direita -->
+                    <a-plane position="0 0 -0.12" width="0.2" height="0.1" color="#ffffff" rotation="45 0 -90"
+                        material="side: double"></a-plane>
+                    <!-- Cauda -->
+                    <a-cone position="-0.1 0 0" radius-bottom="0.05" height="0.15" color="#ffffff" rotation="0 0 90"></a-cone>
+                </a-entity>
+        
+                <!-- Gaivota 3 -->
+                <a-entity position="-5 5 10" rotation="0 -120 0">
+                    <!-- Corpo -->
+                    <a-sphere position="0 0 0" radius="0.1" color="#ffffff"></a-sphere>
+                    <!-- Cabeça -->
+                    <a-sphere position="0.1 0.1 0" radius="0.05" color="#ffffff"></a-sphere>
+                    <!-- Bico -->
+                    <a-cone position="0.17 0.1 0" radius-bottom="0.02" height="0.1" color="#ffa500" rotation="90 90 0"></a-cone>
+                    <!-- Olhos -->
+                    <a-sphere position="0.13 0.13 0.03" radius="0.01" color="#000000"></a-sphere>
+                    <a-sphere position="0.13 0.13 -0.03" radius="0.01" color="#000000"></a-sphere>
+                    <!-- Asa Esquerda -->
+                    <a-plane position="0 0 0.12" width="0.2" height="0.1" color="#ffffff" rotation="-45 0 -90"
+                        material="side: double"></a-plane>
+                    <!-- Asa Direita -->
+                    <a-plane position="0 0 -0.12" width="0.2" height="0.1" color="#ffffff" rotation="45 0 -90"
+                        material="side: double"></a-plane>
+                    <!-- Cauda -->
+                    <a-cone position="-0.1 0 0" radius-bottom="0.05" height="0.15" color="#ffffff" rotation="0 0 90"></a-cone>
+                </a-entity>
+        
+            
+        <a-light type="directional" position="-0.3 6 2"></a-light>
+        <a-light type="ambient" color="#ffffff" intensity="0.25"></a-light>
+
+        <a-camera position="0 3 5"></a-camera>
+
+    </a-scene>
+
+</body>
+
+</html>
